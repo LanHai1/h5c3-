@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--controls:播放器的控制面板显示-->
+<!--autoplay:自动播放-->
+<!--loop:循环播放-->
+<audio src="mp3/aa.mp3" controls autoplay loop></audio>
+<!--poster:指定视频还没有完全下载完毕，或者用户没有点击播放前显示的封面。 默认显示当前视频文件的第一帧画面-->
+<!--
+width:视频的宽度
+height:视频的高度
+-->
+<video controls height="500px" poster="images/l1.jpg">
+    <!--<source></source>:视频兼容 可以多个不同类型的视频-->
+    <source src="mp3/flv.flv" type="video/flv">
+    <source src="mp3/mp4.mp4" type="video/mp4">
+</video>
+<script>
+    /**
+     * 获取html的文件名
+     * @returns {string}
+     */
+    function getHTMLName() {
+        var url = window.location.href;
+        url = url.substring(url.lastIndexOf("/") + 1);
+        url = url.substring(0, url.lastIndexOf("."));
+        return url;
+    }
+
+    let htmlName = getHTMLName();
+    console.log(htmlName);
+</script>
+</body>
+</html>
