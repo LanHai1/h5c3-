@@ -68,12 +68,20 @@
             background-color: #4169e1c7;
             color: #ffffffeb;
         }
+
+        input[name='score'], input[name='admissionDate'], input[name='graduationDate'],input[type='submit'] {
+            color: #000;
+        }
+
+        input[type='submit'] {
+            margin-top: 30px;
+            background-color: #eae9e9;
+        }
     </style>
     <script>
         $(function () {
-            invalidSj($("#phone"), $(".telAside"), function () {
-                invalidSj($("#Email"),$(".emailAside"))
-            });
+            invalidSj($("#phone"), $(".telAside"));
+            invalidSj($("#Email"), $(".emailAside"));
 
 
             /**
@@ -125,6 +133,14 @@
         <input type="email" name="Email" id="Email"
                pattern="^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$">
         <aside class="emailAside">请输入正确的邮箱</aside>
+        <p>所属学院：</p>
+        <input type="text">
+        <p>入学成绩</p>
+        <input type="number" name="score" id="score" value="0" max="100" min="0">
+        <p>入学日期：</p>
+        <input type="date" name="admissionDate" id="admissionDate">
+        <p>毕业日期：</p>
+        <input type="date" name="graduationDate" id="graduationDate">
         <input type="submit" value="提交">
     </fieldset>
 </form>
