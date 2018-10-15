@@ -72,7 +72,7 @@
     <script>
         $(function () {
             invalidSj($("#phone"), $(".telAside"), function () {
-                invalidSj($("#Email"),$(".emailAside")) 
+                invalidSj($("#Email"),$(".emailAside"))
             });
 
 
@@ -119,7 +119,7 @@
         <p>姓名：</p>
         <input type="text" placeholder="请输入用户名" name="userName" id="userName" autofocus>
         <p>手机号码：</p>
-        <input type="tel" name="phone" id="phone" pattern="^1[3|4|5|7|8][0-9]{9}$" required>
+        <input type="tel" name="phone" id="phone" pattern="^1[3|4|5|7|8][0-9]{9}$">
         <aside class="telAside">请输入正确的11位手机号</aside>
         <p>邮箱地址：</p>
         <input type="email" name="Email" id="Email"
