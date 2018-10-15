@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form action="" id="myForm">
+    <!--email：提供了完整的邮箱验证-->
+    邮箱：<input type="email"><br>
+    <!--tel：并不是用来验证，在移动端打开手机数字键盘-->
+    电话：<input type="tel"><br>
+    <!--url：验证网站，必须包含http://-->
+    网站：<input type="url"><br>
+    <!--number：只能输入数字 max：最大值 min：最小值-->
+    数量：<input type="number" max="10" min="0"><br>
+    <!--search：搜索，文本框中会有小叉叉之间一次性删除输入的内容-->
+    请输入搜索内容：<input type="search"><br>
+    <!--range：范围-->
+    范围：<input type="range" min="0" max="100" id="range"><span id="rangeS"></span><br>
+    <script>
+        //范围
+        let rangeInput = document.getElementById("range");
+        let rangeSpan = document.getElementById("rangeS");
+        rangeInput.oninput = function () {
+            rangeSpan.innerHTML = this.value;
+            console.log(this.value);
+        }
+    </script>
+    颜色：<input type="color"><br>
+    时间：<input type="time"><br>
+    日前：<input type="date"><br>
+    日前时间：<input type="datetime-local"><br>
+    月份：<input type="month"><br>
+    星期：<input type="week"><br>
+    <!--placeholder：提示文本 提示占位符-->
+    <!--autofocus：页面刷新后自动获取焦点-->
+    <!--autocomplete：历史记录自动提示 属性值：on打开，off关闭
+        1.必须要submit提交后才能有记录提示
+        2.必须有name属性
+    -->
+    用户名：<input type="text" name="userName" placeholder="请输入用户名" autofocus autocomplete="on"><br>
+    <!--required：必须填写-->
+    <!--pattern：正则表达式-->
+    电话：<input type="tel" required pattern="^1[3|4|5|7|8][0-9]{9}$"><br>
+    <!--multiple：可以选择多个文件或者填写多个邮箱(邮箱之间用[,逗号]分开即可)-->
+    文件：<input type="file" multiple><br>
+    邮箱：<input type="email" multiple><br>
+    <input type="submit" value="提交">
+</form>
+<!--form：属性值form表单的id 数据提交时可将不在form标签中的input标签一起submit-->
+测试：<input type="text" form="myForm">
+
+</body>
+</html>

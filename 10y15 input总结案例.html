@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-2.2.4.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /*form {
+            position: relative;
+        }*/
+
+        fieldset {
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        fieldset > p {
+            height: 40px;
+            line-height: 40px;
+            font-weight: 300;
+        }
+
+        input {
+            width: 100%;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: #ddd;
+            font-size: 15px;
+            box-sizing: border-box;
+            padding-left: 10px;
+            outline: none;
+            font-weight: 200;
+        }
+
+        input[name='phone'] {
+            position: relative;
+        }
+
+        .telAside, .emailAside {
+            position: absolute;
+            text-align: center;
+            padding: 0 4px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #4169e18c;
+            border-radius: 5px;
+            color: #ffffffb5;
+            top: 112px;
+            right: 320px;
+            font-size: 14px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .emailAside {
+            top: 187px;
+        }
+
+        aside:hover {
+            background-color: #4169e1c7;
+            color: #ffffffeb;
+        }
+    </style>
+    <script>
+        $(function () {
+            invalidSj($("#phone"), $(".telAside"), function () {
+                invalidSj($("#Email"),$(".emailAside"))
+            });
+
+
+            /**
+             * 验证错误动画效果
+             * @param ele
+             * @param errorAside
+             */
+            function animatePattern(ele) {
+                let thisLeft = ele.offset().left;//获取不到left值
+                if (true) {
+                    ele.css("display", "block").animate({"right": 320 - 10}, 200, function () {
+                        ele.animate({"right": 320}, 200, function () {
+                            ele.animate({"right": 320 - 10}, 200, function () {
+                                ele.animate({"right": 320}, 200)
+                            })
+                        })
+                    });
+                }
+            }
+
+            /**
+             * input验证事件
+             * @param ele 点击的input
+             * @param error 对应的错误区域
+             * @param fn 多次调用input验证事件
+             */
+            function invalidSj(ele, error, fn) {
+                ele.on("invalid", function (e) {
+                    e.preventDefault();
+                    true ? animatePattern(error) : error.css({"display": "none"});
+                    if (fn) {
+                        fn();
+                    }
+                })
+            }
+        });
+    </script>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>学生档案</legend>
+        <p>姓名：</p>
+        <input type="text" placeholder="请输入用户名" name="userName" id="userName" autofocus>
+        <p>手机号码：</p>
+        <input type="tel" name="phone" id="phone" pattern="^1[3|4|5|7|8][0-9]{9}$" required>
+        <aside class="telAside">请输入正确的11位手机号</aside>
+        <p>邮箱地址：</p>
+        <input type="email" name="Email" id="Email"
+               pattern="^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$">
+        <aside class="emailAside">请输入正确的邮箱</aside>
+        <input type="submit" value="提交">
+    </fieldset>
+</form>
+</body>
+</html>
