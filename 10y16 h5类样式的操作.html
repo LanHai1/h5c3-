@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .underList {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /*add 为指定元素添加类样式 一次只能添加一个样式*/
+            document.querySelector("#add").onclick = function () {
+                /*classList 当前元素的所有样式列表-数组*/
+                document.querySelectorAll("li")[0].classList.add("red");
+                document.querySelectorAll("li")[0].classList.add("underList");
+            };
+            /*remove 为指定元素移除类样式*/
+            document.querySelector("#remove").onclick = function () {
+                document.querySelector(".green").classList.remove("green");
+            };
+            /*toggle 为指定元素切换类样式*/
+            document.querySelector("#toggle").onclick = function () {
+                document.querySelectorAll("li")[2].classList.toggle("yellow");
+            };
+            /*contains 为指定元素判断是否存在这个类样式 存在返回true 不存在返回false*/
+            document.querySelector("#contains").onclick = function () {
+                let isContains = document.querySelector("li:last-child").classList.contains("underList");//false
+                console.log(isContains);
+            };
+        };
+    </script>
+</head>
+<body>
+<ul>
+    <li>java</li>
+    <li class="green">c</li>
+    <li>前端</li>
+    <li>php</li>
+</ul>
+<input type="button" value="给第一个li添加red样式" id="add">
+<input type="button" value="给第二个li移除green样式" id="remove">
+<input type="button" value="给第三个li切换yellow样式" id="toggle">
+<input type="button" value="判断第四个li是否包含某个样式" id="contains">
+</body>
+</html>

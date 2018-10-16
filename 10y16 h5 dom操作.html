@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        #green {
+            color: green;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        #blue {
+            color: blue;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /*query：查询 Selector：选择器*/
+            /*获取单个元素*/
+            let liFirst = document.querySelector("li[class='yellow']");
+            //let liFirst = document.querySelector(".red']");
+            console.log(liFirst);
+            /*获取所有的元素*/
+            let liALl = document.querySelectorAll("li");
+            console.log(liALl);
+        };
+    </script>
+</head>
+<body>
+<ul>
+    <li class="red">java</li>
+    <li id="green">c</li>
+    <li class="yellow">前端</li>
+    <li id="blue">php</li>
+</ul>
+</body>
+</html>
