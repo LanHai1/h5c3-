@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*online事件 网络连通的时候触发这个事件*/
+    /*addEventListener是为了兼容移动端*/
+    window.addEventListener("online", function () {
+        console.log("网络已连接");
+    });
+    /*offline事件 网络断开的时候触发这个事件*/
+    window.addEventListener("offline", function () {
+        console.log("网络断开");
+    });
+</script>
+</body>
+</html>

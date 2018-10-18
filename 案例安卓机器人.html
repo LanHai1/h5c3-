@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background: #ccc;
+        }
+
+        main {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        header, footer, aside {
+            height: 125px;
+            width: 250px;
+            margin: 0 auto;
+            background-color: green;
+            position: relative;
+        }
+
+        header {
+            border-top-left-radius: 120px;
+            border-top-right-radius: 120px;
+            height: 115px;
+            margin-bottom: 10px;
+        }
+
+        header > span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            bottom: 40px;
+        }
+
+        header > span:first-of-type {
+            left: 60px;
+        }
+
+        header > span:last-of-type {
+            right: 60px;
+        }
+
+        aside {
+            height: 250px;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+
+        aside:before, aside:after {
+            content: "";
+            height: 175px;
+            width: 30px;
+            background-color: green;
+            border-radius: 10px;
+            position: absolute;
+            top: 25px;
+        }
+
+        aside:before {
+            left: -50px;
+        }
+
+        aside:after {
+            right: -50px;
+        }
+
+        footer {
+            background-color: #CCC;
+            height: 0;
+
+        }
+
+        footer:before, footer:after {
+            content: "";
+            width: 30px;
+            height: 90px;
+            background-color: green;
+            position: absolute;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        footer:before {
+            left: 60px;
+        }
+
+        footer:after {
+            right: 60px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <div></div>
+        <span></span>
+        <span></span>
+    </header>
+    <aside></aside>
+    <footer></footer>
+</main>
+</body>
+</html>
