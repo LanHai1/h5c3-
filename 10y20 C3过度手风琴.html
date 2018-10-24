@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu {
+            margin: 100px auto;
+            width: 200px;
+        }
+
+        .menu h3 {
+            background-color: rebeccapurple;
+            text-align: center;
+        }
+
+        .menu > .item > .itemBox {
+            height: 0;
+            overflow: hidden;
+            transition: height 1s;
+        }
+
+        .menu > .item > .itemBox ul {
+            list-style-type: none;
+            background-color: darkcyan;
+        }
+
+        .menu > .item:hover > .itemBox {
+            height: 88px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="item">
+        <h3>市内新闻</h3>
+        <div class="itemBox">
+            <ul>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h3>省内新闻</h3>
+        <div class="itemBox">
+            <ul>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h3>国内新闻</h3>
+        <div class="itemBox">
+            <ul>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <h3>国际新闻</h3>
+        <div class="itemBox">
+            <ul>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+                <li>深圳超市肉菜档遭抢</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

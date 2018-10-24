@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .clearfix {
+            *zomm: 1;
+        }
+
+        .clearfix:after {
+            content: "";
+            height: 0;
+            display: block;
+            overflow: hidden;
+            clear: both;
+        }
+
+        div {
+            width: 200px;
+            height: 287px;
+            position: relative;
+            margin: 350px auto;
+        }
+
+        div > img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: left top;
+            transition: all 1s;
+        }
+
+        div:hover > img:nth-child(1) {
+            transform: rotate(60deg);
+        }
+
+        div:hover > img:nth-child(2) {
+            transform: rotate(120deg);
+        }
+
+        div:hover > img:nth-child(3) {
+            transform: rotate(180deg);
+        }
+
+        div:hover > img:nth-child(4) {
+            transform: rotate(240deg);
+        }
+
+        div:hover > img:nth-child(5) {
+            transform: rotate(300deg);
+        }
+
+        div:hover > img:nth-child(6) {
+            transform: rotate(360deg);
+        }
+
+        div > img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="clearfix">
+    <img src="images/pk1.png" alt="">
+    <img src="images/pk2.png" alt="">
+    <img src="images/pk1.png" alt="">
+    <img src="images/pk2.png" alt="">
+    <img src="images/pk1.png" alt="">
+    <img src="images/pk3.png" alt="">
+</div>
+</body>
+</html>
