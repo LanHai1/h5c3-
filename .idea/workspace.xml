@@ -18,11 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="10y24 C3旋转设置轴心案例.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="10y24 C3旋转设置轴心案例.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/10y24 C3旋转设置轴心案例.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
               <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="10y24 C3先移动再旋转 盾牌复原案例.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10y24 C3先移动再旋转 盾牌复原案例.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-351">
+              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="10y24 C3立方体衍生个人主页网站特效.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/10y24 C3立方体衍生个人主页网站特效.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="185" column="34" lean-forward="true" selection-start-line="185" selection-start-column="34" selection-end-line="185" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -62,6 +80,10 @@
         <option value="$PROJECT_DIR$/10y20.html" />
         <option value="$PROJECT_DIR$/10y20 C3过度手风琴.html" />
         <option value="$PROJECT_DIR$/10y24 C3旋转设置轴心案例.html" />
+        <option value="$PROJECT_DIR$/10y24 C3先移动再旋转 盾牌复原案例.html" />
+        <option value="$PROJECT_DIR$/10y14 C3立方体.html" />
+        <option value="$PROJECT_DIR$/10y24 C3立方体.html" />
+        <option value="$PROJECT_DIR$/10y24 C3立方体衍生个人主页网站特效.html" />
       </list>
     </option>
   </component>
@@ -90,6 +112,11 @@
             <path>
               <item name="h5c3Class" type="b2602c69:ProjectViewProjectNode" />
               <item name="h5c3Class" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5c3Class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5c3Class" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -143,12 +170,12 @@
       <workItem from="1540019865062" duration="819000" />
       <workItem from="1540169690038" duration="204000" />
       <workItem from="1540172868221" duration="28000" />
-      <workItem from="1540350924285" duration="1358000" />
+      <workItem from="1540350924285" duration="9554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28043000" />
+    <option name="totallyTimeSpent" value="36239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -458,6 +485,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10y24 C3先移动再旋转 盾牌复原案例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10y24 C3立方体衍生个人主页网站特效.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="185" column="34" lean-forward="true" selection-start-line="185" selection-start-column="34" selection-end-line="185" selection-end-column="34" />
         </state>
       </provider>
     </entry>
