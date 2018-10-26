@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+&lt;!&ndash;H5表单input中新增的type属性值总结&ndash;&gt;
+<form>
+    &lt;!&ndash;email:提供了完整的邮箱验证<要求必须包含@符号，同时必须包含服务器名称，如果不能满足验证，则会阻止当前数据的提交！>&ndash;&gt;
+    <label for="email">邮箱</label><input type="email" id="email"><br>
+    &lt;!&ndash;tel:用来在移动端打开数字键盘，限制用户输入的内容只能为数字&ndash;&gt;
+    <label for="phone">电话</label><input type="tel" id="phone"><br>
+    &lt;!&ndash;url:验证合法的网站，必须包含<http://>&ndash;&gt;
+    <label for="url">网站</label><input type="url" id="url"><br>
+    &lt;!&ndash;number:用户输入的只能为数字，包含小数点，不能输入除数字以外的其他字符
+        max:最大值
+        min:最小值
+        &ndash;&gt;
+    <label for="number">数量</label><input type="number" max="100" min="1" id="number"><br>
+    &lt;!&ndash;search:可以提供更人性化的输入体验，输入后右上角会出现叉叉可一次删除输入的内容&ndash;&gt;
+    <label for="search">请输入商品名称</label><input type="search" id="search"><br>
+    &lt;!&ndash;range:范围&ndash;&gt;
+    <label for="range">范围</label><input type="range" id="range"><span id="rangeSpan"></span><br>
+    <script>
+        //范围
+        let rangeInput = document.getElementById("range");
+        let rangeSpan = document.getElementById("rangeSpan");
+        rangeSpan.innerHTML = rangeInput.value;
+        rangeInput.oninput = function () {
+            rangeSpan.innerHTML = this.value;
+            console.log(this.value);
+        }
+    </script>
+    颜色<input type="color"><br>
+    时间<input type="time"><br>
+    日前<input type="date"><br>
+    日前时间<input type="datetime-local"><br>
+    月份<input type="month"><br>
+    星期<input type="week"><br>
+</form>-->
+<!--<form id="myForm">
+    &lt;!&ndash;placeholder:提示文本，提示占位符&ndash;&gt;
+    &lt;!&ndash;autofocus:页面刷新后自动获取焦点&ndash;&gt;
+    &lt;!&ndash;autocomplete:历史记录自动提示 属性值:off<关闭> on<打开>
+        1.设置该属性的元素必须要有name属性
+        2.必须要submit提交后才会有历史记录提示
+        &ndash;&gt;
+    用户名<input type="text" name="userName" placeholder="请输入用户名" autofocus autocomplete="on"><br>
+    &lt;!&ndash;required:必须填写&ndash;&gt;
+    &lt;!&ndash;pattern:正则表达式&ndash;&gt;
+    电话<input type="tel" required pattern="^1[3|4|5|7|8][0-9]{9}$"><br>
+    !&#45;&#45;multiple：可以选择多个文件或者填写多个邮箱(邮箱之间用[,逗号]分开即可)&ndash;&gt;
+    文件：<input type="file" multiple><br>
+    <input type="submit">
+</form>
+&lt;!&ndash;form：属性值form表单的id 数据提交时可将不在form标签中的input标签一起submit&ndash;&gt;
+测试：<input type="text" form="myForm">-->
+<!--<form action="">
+    电话：<input type="tel" name="userPhone" id="userPhone" pattern="^1\d{10}$"> <br>
+    <input type="submit">
+</form>
+<script>
+    //1.oninput:监听当前指定元素内容的改变：只要内容改变(添加内容，删除内容)，就会触发这个事件
+    document.getElementById("userPhone").oninput=function(){
+        console.log("oninput:"+this.value);
+    }
+
+    /*onkeyup:键盘弹起的时候触发：每一个键的弹起都会触发一次*/
+    document.getElementById("userPhone").onkeyup=function(){
+        console.log("onkeyup:"+this.value);
+    }
+
+    /*oninvalid:当验证不通过时触发*/
+    document.getElementById("userPhone").oninvalid=function(){
+        /*设置默认的提示信息*/
+        this.setCustomValidity("请输入合法的11位手机号");
+        console.log(111)
+    }
+</script>-->
+<!--<form>
+    <label for="phone">电话</label><input type="tel" id="phone" pattern="^1\d{10}$"><br>
+    <input type="submit">
+</form>
+<script>
+    let phone = document.getElementById("phone");
+    /*oninput事件:监听当前input内容的改变，<只要改变内容就会触发这个事件>
+    * oninput事件和onkeyup事件的区别
+    * 1.oninput事件是只要改变了内容就会触发事件 ， onkeyup事件是键盘弹起的时候触发
+    * 2.用鼠标复制粘贴oninput事件会触发 onkeyup事件不会触发
+    * */
+    phone.oninput = function () {
+        console.log(this.value);
+    };
+    phone.oninvalid = function (event) {
+        event = event || window.event;//event兼容写法
+        /*设置提示气泡中的文字*/
+        this.setCustomValidity("请输入11位手机号");
+        /*阻止默认提示气泡*/
+        event.preventDefault();
+    };
+</script>-->
+<style>
+    .red {
+        color: red;
+    }
+
+    .green {
+        color: green;
+    }
+
+    .yellow {
+        color: yellow;
+    }
+
+    .underList {
+        text-decoration: underline;
+    }
+</style>
+<ul>
+    <li>java</li>
+    <li class="green">c</li>
+    <li>前端</li>
+    <li>php</li>
+</ul>
+<input type="button" value="给第一个li添加red样式和underList样式" id="add">
+<input type="button" value="给第二个li移除green样式" id="remove">
+<input type="button" value="给第三个li切换yellow样式" id="toggle">
+<input type="button" value="判断第四个li是否包含某个样式" id="contains">
+<script>
+    window.onload = function () {
+        document.querySelector("#add").addEventListener("click", function () {
+            /*add:为元素添加指定的样式，一次只能添加一个样式*/
+            /*querySelector("li"):querySelector获取的是单个标签如有多个获取的是第一个符合条件的标签*/
+            document.querySelector("li").classList.add("red");
+            document.querySelector("li").classList.add("underList");
+        });
+        document.querySelector("#remove").addEventListener("click", function () {
+            /*remove:为元素移除指定的样式*/
+            /*querySelectorAll("li")[1]:querySelectorAll获取的是个数组*/
+            document.querySelectorAll("li")[1].classList.remove("green");
+        });
+        document.querySelector("#toggle").addEventListener("click", function () {
+            /*toggle:切换样式，有则移除，无则添加*/
+            document.querySelectorAll("li")[2].classList.toggle("yellow");
+        });
+        document.querySelector("#contains").addEventListener("click", function () {
+            /*contains:判断这个元素是否有这个样式，返回的结果是布尔值*/
+            let isContains = document.querySelectorAll("li")[3].classList.contains("red");
+            console.log(isContains);
+        });
+    }
+</script>
+</body>
+</html>

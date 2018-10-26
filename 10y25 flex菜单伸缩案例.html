@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 500px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin: 100px auto;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: darkcyan;
+            display: flex;
+            width: 100%;
+            height: 36px;
+        }
+
+        .box > ul > li {
+            line-height: 36px;
+            text-align: center;
+            border: 1px solid #2f2a2b;
+            flex: 1;
+            transition: flex 1s linear;
+        }
+        .box > ul > li:hover{
+            flex: 1.5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>这是第一个</li>
+        <li>这是第二个</li>
+        <li>这是第三个</li>
+        <li>这是第四个</li>
+    </ul>
+</div>
+</body>
+</html>

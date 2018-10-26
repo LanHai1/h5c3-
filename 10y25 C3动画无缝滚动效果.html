@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 882px;
+            height: 86px;
+            background-color: #000;
+            overflow: hidden;
+            margin: 100px auto;
+        }
+
+        ul {
+            width: 200%;
+            list-style-type: none;
+            animation-name: moveUl;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            cursor: pointer;
+        }
+
+        ul > li {
+            float: left;
+            transition: transform 1s, opacity 1s;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        ul > li:hover {
+            /*transform: scale(1.1);*/
+            opacity: 0.5;
+        }
+
+        @keyframes moveUl {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(-882px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+        <li><img src="images/6.jpg" alt=""></li>
+        <li><img src="images/7.jpg" alt=""></li>
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+        <li><img src="images/6.jpg" alt=""></li>
+        <li><img src="images/7.jpg" alt=""></li>
+    </ul>
+</div>
+<script>
+
+    function getColor() {
+        var colorStr = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
+        var colorArr = colorStr.split(",");
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += colorArr[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    console.log(getColor())
+</script>
+</body>
+</html>
