@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--来自一个很想要很牛逼的程序员-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.dowebok.com/77/css/jquery.fullPage.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+
+        .first .logo {
+            background: url("images/logo.png");
+            width: 251px;
+            height: 186px;
+            margin: 0 auto;
+        }
+
+        .first .test {
+            width: 100%;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .first .test img {
+            margin: 0 40px;
+            opacity: 0.3;
+            transition: transform 2s, opacity 1.5s, margin 1.5s;
+        }
+
+        .first.current .test > img {
+            margin: 0 5px;
+            opacity: 1;
+        }
+
+        .first .intro {
+            background: url("images/info_1.png");
+            width: 772px;
+            height: 49px;
+            margin: 40px auto;
+        }
+
+        /*第一屏幕结束*/
+        .second > div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .second .shield {
+            width: 440px;
+            font-size: 0;
+        }
+
+        .second .shield > img {
+            transition: transform 1s;
+        }
+
+        .second .shield > img:nth-of-type(1) {
+            transform: translate(100px, 100px) rotate(30deg);
+        }
+
+        .second .shield > img:nth-of-type(2) {
+            transform: translate(-100px, -100px) rotate(-30deg);
+        }
+
+        .second .shield > img:nth-of-type(3) {
+            transform: translate(200px, 200px) rotate(60deg);
+        }
+
+        .second .shield > img:nth-of-type(4) {
+            transform: translate(-200px, -200px) rotate(-60deg);
+        }
+
+        .second .shield > img:nth-of-type(5) {
+            transform: translate(150px, 150px) rotate(90deg);
+        }
+
+        .second .shield > img:nth-of-type(6) {
+            transform: translate(50px, 150px) rotate(-90deg);
+        }
+
+        .second .shield > img:nth-of-type(7) {
+            transform: translate(-150px, -150px) rotate(60deg);
+        }
+
+        .second .shield > img:nth-of-type(8) {
+            transform: translate(10px, -250px) rotate(-90deg);
+        }
+
+        .second .shield > img:nth-of-type(9) {
+            transform: translate(-250px, 10px) rotate(45deg);
+        }
+
+        .second.current .shield > img {
+            transform: none;
+        }
+
+        .second .right {
+            height: 309px;
+            width: 635px;
+            background: url("images/info_2.png");
+        }
+
+        /*第二屏幕结束*/
+        .third > div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .third .left {
+            width: 631px;
+            height: 278px;
+            background: url("images/info_3.png");
+        }
+
+        .third .right {
+            height: 449px;
+            width: 453px;
+            background: url("images/circle.png");
+            position: relative;
+        }
+
+        .third .right > .rotate {
+            height: 204px;
+            width: 203px;
+            background: url("images/rocket.png");
+            position: absolute;
+            left: -30%;
+            top: 180%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: transform 1s, top 1s, left 1s;
+        }
+
+        .third.current .right > .rotate {
+            left: 50%;
+            top: 50%;
+        }
+
+        /*第三屏结束*/
+        .fourth > div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .fourth .left {
+
+        }
+
+        .fourth .left > .top {
+            width: 529px;
+            height: 66px;
+            background: url("images/search.png");
+            transform: translateX(-600px);
+            transition: transform 2s;
+            position: relative;
+        }
+
+        .fourth.current .left > .top {
+            transform: translateX(0);
+        }
+
+        .fourth .left > .top > span {
+            display: inline-block;
+            width: 0;
+            height: 22px;
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            transform: translateY(-50%);
+            overflow: hidden;
+            transition: width 1s steps(5) 2s;
+        }
+
+        .fourth.current .left > .top > span {
+            width: 99px;
+        }
+
+        .fourth .left > .top > span img {
+            width: 99px;
+            height: 22px;
+        }
+
+        .fourth .left > .bottom {
+            width: 529px;
+            height: 0;
+            overflow: hidden;
+            margin-top: -12px;
+            transition: height 1s linear 3s;
+        }
+
+        .fourth.current .left > .bottom {
+            height: 372px;
+        }
+
+        .fourth .left > .bottom > img {
+            width: 529px;
+            height: 372px;
+        }
+
+        .fourth .right {
+            width: 612px;
+            height: 299px;
+            background: url("images/info_4.png");
+        }
+
+        /*第四屏结束*/
+    </style>
+</head>
+<body>
+<div id="dowebok">
+    <div class="section first">
+        <div class="logo"></div>
+        <div class="test">
+            <img src="images/text_1.png" alt="">
+            <img src="images/text_2.png" alt="">
+            <img src="images/text_3.png" alt="">
+            <img src="images/text_4.png" alt="">
+            <img src="images/text_5.png" alt="">
+            <img src="images/text_6.png" alt="">
+            <img src="images/text_7.png" alt="">
+            <img src="images/text_8.png" alt="">
+        </div>
+        <div class="intro"></div>
+    </div><!--第一屏-->
+    <div class="section second">
+        <div class="shield">
+            <img src="images/shield_1.png" alt="">
+            <img src="images/shield_2.png" alt="">
+            <img src="images/shield_3.png" alt="">
+            <img src="images/shield_4.png" alt="">
+            <img src="images/shield_5.png" alt="">
+            <img src="images/shield_6.png" alt="">
+            <img src="images/shield_7.png" alt="">
+            <img src="images/shield_8.png" alt="">
+            <img src="images/shield_9.png" alt="">
+        </div>
+        <div class="right"></div>
+    </div><!--第二屏-->
+    <div class="section third">
+        <div class="left"></div>
+        <div class="right">
+            <div class="rotate"></div>
+        </div>
+    </div><!--第三屏-->
+    <div class="section fourth">
+        <div class="left">
+            <div class="top">
+                <span>
+                    <img src="images/key.png" alt="">
+                </span>
+            </div>
+            <div class="bottom">
+                <img src="images/result.png" alt="">
+            </div>
+        </div>
+        <div class="right"></div>
+    </div><!--第四屏-->
+    <div class="section">
+        <h3>第五屏</h3>
+    </div><!--第五屏-->
+</div>
+<script src="jquery-2.2.4.js"></script>
+<script src="jquery.fullPage.min.js"></script>
+<script>
+    $(function () {
+        $('#dowebok').fullpage({
+            sectionsColor: ["#0da5d6", "#2ab561", "#de8910", "#16ba9d", "#0da5d6"],
+            navigation: true,
+            navigationTooltips: ["1", "2", "3", "4", "5"],
+            loopBottom: true,
+            loopTop: true,
+            afterLoad: function (anchorLink, index) {
+                $(".section").removeClass("current");//先移除所有类样式为section的current样式
+                $(".section").eq(index - 1).addClass("current");//为当前页面添加current样式 index从1开始
+            }
+        })
+        ;
+    });
+</script>
+</body>
+</html>
